@@ -1,0 +1,13 @@
+[user]
+  name = Scott Langendyk
+  email = scott@langendyk.com
+
+[color]
+  ui = true
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor = vim
+
+[push]
+  default = simple
