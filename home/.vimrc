@@ -13,6 +13,7 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/' }
 Bundle 'majutsushi/tagbar'
 Bundle 'ap/vim-css-color'
 Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
 
 " Git
 Bundle 'tpope/vim-fugitive'
@@ -84,3 +85,4 @@ augroup myvimrc
 augroup END
 
 nmap <Leader>t :TagbarToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
