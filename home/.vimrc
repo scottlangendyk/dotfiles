@@ -26,6 +26,9 @@ Bundle 'tpope/vim-sleuth'
 " JavaScript
 Bundle 'jelera/vim-javascript-syntax'
 
+" Utilities
+Bundle 'benmills/vimux'
+
 syntax enable
 filetype plugin indent on
 
