@@ -86,3 +86,6 @@ augroup END
 
 nmap <Leader>t :TagbarToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
+
+" Use shared tmux clipboard
+set clipboard=unnamed
