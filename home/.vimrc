@@ -32,6 +32,7 @@ Bundle 'benmills/vimux'
 " Ruby/Rails
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rake'
 
 syntax enable
 filetype plugin indent on
