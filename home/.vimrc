@@ -11,7 +11,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/' }
 Bundle 'majutsushi/tagbar'
-Bundle 'ap/vim-css-color'
+Bundle 'gorodinskiy/vim-coloresque'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 
