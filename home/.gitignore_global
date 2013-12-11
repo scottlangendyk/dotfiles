@@ -13,3 +13,4 @@ Icon
 Session.vim
 .netrwhist
 *~
+!*.svg
