@@ -34,6 +34,9 @@ Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 
+" Markdown
+Bundle "tpope/vim-markdown"
+
 syntax enable
 filetype plugin indent on
 
