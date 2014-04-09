@@ -84,8 +84,8 @@ set background=dark
 colorscheme solarized
 
 " For git-gutter realtime
-set updatetime=750
 let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
 
 au FileType javascript call JavaScriptFold()
 
