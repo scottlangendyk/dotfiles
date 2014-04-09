@@ -1,6 +1,10 @@
 set nocompatible
 filetype off
 
+" Load Go plugins
+set rtp+=$GOROOT/misc/vim
+
+" Load vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 

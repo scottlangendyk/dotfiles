@@ -1,12 +1,14 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
-plugins=(git osx rbenv vagrant)
+plugins=(git osx rbenv vagrant golang)
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.utf8
 export EDITOR=vim
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$HOME/CocoaPods/bin:$GOROOT/bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:/usr/local/share/npm/lib/node_modules/phantomjs/lib/phantom/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
