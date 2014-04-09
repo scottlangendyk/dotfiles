@@ -33,11 +33,6 @@ Bundle 'jelera/vim-javascript-syntax'
 " Utilities
 Bundle 'benmills/vimux'
 
-" Ruby/Rails
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-
 " Markdown
 Bundle "tpope/vim-markdown"
 
