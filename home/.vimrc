@@ -100,3 +100,12 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Use shared tmux clipboard
 set clipboard=unnamed
+
+" Clear whitespace at the end of lines automatically
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Don't fold anything.
+autocmd BufWinEnter * set foldlevel=999999
+
+" Show hidden files in nerd tree
+let NERDTreeShowHidden=1
