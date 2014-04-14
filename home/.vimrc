@@ -109,3 +109,6 @@ autocmd BufWinEnter * set foldlevel=999999
 
 " Show hidden files in nerd tree
 let NERDTreeShowHidden=1
+
+" Set filetype for ruby config files
+au BufNewFile,BufRead Berksfile,Vagrantfile set filetype=ruby
