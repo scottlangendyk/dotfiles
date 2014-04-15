@@ -1,7 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
-plugins=(git osx rbenv vagrant golang)
+plugins=(git osx rbenv vagrant golang berkshelf)
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.utf8
