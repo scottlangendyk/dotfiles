@@ -13,7 +13,7 @@ Bundle 'gmarik/vundle'
 
 " GUI
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/' }
+Bundle 'bling/vim-airline'
 Bundle 'majutsushi/tagbar'
 Bundle 'gorodinskiy/vim-coloresque'
 Bundle 'kien/ctrlp.vim'
@@ -68,6 +68,7 @@ set omnifunc=syntaxcomplete#Complete
 set laststatus=2
 set noshowmode
 set guifont=Source\ Code\ Pro\ for\ Powerline
+let g:airline_powerline_fonts = 1
 
 " Stops ESC delay
 if ! has('gui_running')
