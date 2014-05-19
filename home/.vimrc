@@ -5,38 +5,39 @@ filetype off
 set rtp+=$GOROOT/misc/vim
 
 " Load vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Track vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " GUI
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'bling/vim-airline'
-Bundle 'majutsushi/tagbar'
-Bundle 'gorodinskiy/vim-coloresque'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'majutsushi/tagbar'
+Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
 
 " Git
-Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 " Editing
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-sleuth'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-sleuth'
 
 " JavaScript
-Bundle 'jelera/vim-javascript-syntax'
+Plugin 'jelera/vim-javascript-syntax'
 
 " Utilities
-Bundle 'benmills/vimux'
+Plugin 'benmills/vimux'
 
 " Markdown
-Bundle "tpope/vim-markdown"
+Plugin 'tpope/vim-markdown'
 
 syntax enable
+call vundle#end()
 filetype plugin indent on
 
 set number
