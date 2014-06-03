@@ -26,6 +26,7 @@ Plugin 'airblade/vim-gitgutter'
 " Editing
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-sleuth'
+Plugin 'scrooloose/nerdcommenter'
 
 " JavaScript
 Plugin 'jelera/vim-javascript-syntax'
