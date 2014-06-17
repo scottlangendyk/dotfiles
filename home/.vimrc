@@ -83,7 +83,7 @@ if ! has('gui_running')
 endif
 
 set t_Co=16
-set background=dark
+set background=light
 colorscheme solarized
 
 " For git-gutter realtime
