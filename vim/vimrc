@@ -1,45 +1,41 @@
 set nocompatible
 filetype off
 
-" Load Go plugins
-set rtp+=$GOROOT/misc/vim
-
 " Load vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Track vundle
 Plugin 'gmarik/Vundle.vim'
-
-" GUI
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
-Plugin 'majutsushi/tagbar'
 Plugin 'gorodinskiy/vim-coloresque'
-Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-
-" Git
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
-
-" Editing
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-sleuth'
-Plugin 'scrooloose/nerdcommenter'
-
-" JavaScript
 Plugin 'jelera/vim-javascript-syntax'
-
-" Utilities
-Plugin 'benmills/vimux'
-
-" Markdown
 Plugin 'tpope/vim-markdown'
 
-syntax enable
 call vundle#end()
 filetype plugin indent on
+
+syntax on
+
+" Color scheme setup
+let g:solarized_termtrans=1
+set t_Co=16
+set background=light
+colorscheme solarized
+
+" Powerline configuration
+set laststatus=2
+set noshowmode
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+" Load Go plugins
+set rtp+=$GOROOT/misc/vim
 
 set number
 set nowrap
@@ -66,12 +62,6 @@ set foldlevelstart=1
 
 set omnifunc=syntaxcomplete#Complete
 
-" Powerline configuration
-set laststatus=2
-set noshowmode
-set guifont=Source\ Code\ Pro\ for\ Powerline
-let g:airline_powerline_fonts = 1
-
 " Stops ESC delay
 if ! has('gui_running')
   set ttimeoutlen=10
@@ -81,10 +71,6 @@ if ! has('gui_running')
     au InsertLeave * set timeoutlen=1000
   augroup END
 endif
-
-set t_Co=16
-set background=light
-colorscheme solarized
 
 " For git-gutter realtime
 let g:gitgutter_realtime = 0
@@ -115,3 +101,6 @@ let NERDTreeShowHidden=1
 
 " Set filetype for ruby config files
 au BufNewFile,BufRead Berksfile,Cheffile,Vagrantfile set filetype=ruby
+
+let g:netrw_liststyle = 3
+let g:netrw_preview = 1

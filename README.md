@@ -2,4 +2,8 @@
 My personal dotfiles.
 
 ## Installation
-Install with [homesick](https://github.com/technicalpickles/homesick)
+Install with make
+
+```shell
+make install
+```

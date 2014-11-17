@@ -1,0 +1,30 @@
+source /usr/local/etc/bash_completion.d/git-completion.bash
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.utf8
+export LANGUAGE=en_US.utf8
+
+export EDITOR=vim
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/code/go
+
+export PATH=/usr/local/bin:$PATH
+export PATH=$GOROOT/bin:$PATH
+export PATH=$PATH:/opt/chefdk/embedded/bin
+export PATH=$HOME/CocoaPods/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$PATH
+
+eval "$(rbenv init -)"
+
+NO_COLOR='\[\033[0m\]'
+COLOR_RED='\[\033[0;31m\]'
+COLOR_WHITE='\[\033[0;37m\]'
+COLOR_YELLOW='\[\033[0;33m\]'
+COLOR_BLUE='\[\033[0;34m\]'
+
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+
+PS1="${COLOR_YELLOW}\W${COLOR_BLUE}\$(__git_ps1) ${NO_COLOR}"
