@@ -16,7 +16,9 @@ export PATH=$PATH:/opt/chefdk/embedded/bin
 export PATH=$HOME/CocoaPods/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 
-eval "$(rbenv init -)"
+if [ -d "$HOME/.rbenv/bin" ]; then
+  eval "$(rbenv init -)"
+fi
 
 NO_COLOR='\[\033[0m\]'
 COLOR_RED='\[\033[0;31m\]'
