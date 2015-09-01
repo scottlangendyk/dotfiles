@@ -1,24 +1,48 @@
-set nocompatible
-filetype off
+" Install Vundle.vim
+if !isdirectory(expand('~/.vim/bundle/Vundle.vim'))
+  silent !git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
+endif
 
-" Load vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Setup Vundle.vim
+if !isdirectory(expand('~/.vim/bundle/Vundle.vim'))
+  echoerr "Vundle.vim not installed"
+else
+  filetype off
+  set runtimepath+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
-Plugin 'gorodinskiy/vim-coloresque'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-sleuth'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'tpope/vim-markdown'
+  Plugin 'gmarik/Vundle.vim'
+  Plugin 'altercation/vim-colors-solarized'
+  Plugin 'bling/vim-airline'
+  Plugin 'gorodinskiy/vim-coloresque'
+  Plugin 'scrooloose/nerdtree'
+  Plugin 'tpope/vim-fugitive'
+  Plugin 'airblade/vim-gitgutter'
+  Plugin 'tpope/vim-surround'
+  Plugin 'tpope/vim-sleuth'
+  Plugin 'jelera/vim-javascript-syntax'
+  Plugin 'tpope/vim-markdown'
 
-call vundle#end()
+  call vundle#end()
+endif
+
 filetype plugin indent on
+
+" Install plugins
+augroup plugins
+  autocmd!
+  autocmd VimEnter * PluginInstall
+  autocmd VimEnter * bdelete
+augroup END
+
+augroup myvimrc
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+  autocmd BufWritePost $MYVIMRC PluginInstall
+  autocmd BufWritePost $MYVIMRC bdelete
+  autocmd BufWritePost $MYVIMRC AirlineRefresh
+  autocmd BufWritePost $MYVIMRC AirlineRefresh
+augroup END
 
 syntax on
 
@@ -41,7 +65,6 @@ set number
 set nowrap
 set encoding=utf-8
 set wildignore +=node_modules,coverage,cache,tmp,vendor,*.png,*.jpg
-set noswapfile
 
 " Disable opening message
 set shortmess+=I
@@ -60,35 +83,20 @@ set foldmethod=syntax
 set foldlevel=1
 set foldlevelstart=1
 
-set omnifunc=syntaxcomplete#Complete
-
 " Stops ESC delay
-if ! has('gui_running')
-  set ttimeoutlen=10
-  augroup FastEscape
-    autocmd!
-    au InsertEnter * set timeoutlen=0
-    au InsertLeave * set timeoutlen=1000
-  augroup END
-endif
+set ttimeoutlen=10
+
+" Allow mouse usage
+set mouse=a
 
 " For git-gutter realtime
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 
-au FileType javascript call JavaScriptFold()
-
-" auto reload .vimrc
-augroup myvimrc
-  au!
-  au BufWritePost .vimrc so $MYVIMRC | if has('gui_running') | so $MYVIMRC | endif
-augroup END
+autocmd FileType javascript call JavaScriptFold()
 
 nmap <Leader>t :TagbarToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
-
-" Use shared tmux clipboard
-set clipboard=unnamed
 
 " Clear whitespace at the end of lines automatically
 autocmd BufWritePre * :%s/\s\+$//e
@@ -100,7 +108,7 @@ autocmd BufWinEnter * set foldlevel=999999
 let NERDTreeShowHidden=1
 
 " Set filetype for ruby config files
-au BufNewFile,BufRead Berksfile,Cheffile,Vagrantfile set filetype=ruby
+autocmd BufNewFile,BufRead Podfile,*.podspec,Berksfile,Cheffile,Vagrantfile set filetype=ruby
 
 let g:netrw_liststyle = 3
 let g:netrw_preview = 1
