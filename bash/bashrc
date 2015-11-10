@@ -16,9 +16,14 @@ export PATH=$GOROOT/bin:$PATH
 export PATH=$PATH:/opt/chefdk/embedded/bin
 export PATH=$HOME/CocoaPods/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
+export PATH="$HOME/.ndenv/bin:$PATH"
 
 if [ -d "$HOME/.rbenv/bin" ]; then
   eval "$(rbenv init -)"
+fi
+
+if [ -d "$HOME/.ndenv/bin" ]; then
+  eval "$(ndenv init -)"
 fi
 
 NO_COLOR='\[\033[0m\]'
