@@ -36,3 +36,6 @@ GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 
 PS1="${COLOR_YELLOW}\W${COLOR_BLUE}\$(__git_ps1) ${NO_COLOR}"
+
+export ANDROID_HOME=/usr/local/opt/android-sdk
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
