@@ -15,13 +15,15 @@ else
   Plugin 'altercation/vim-colors-solarized'
   Plugin 'bling/vim-airline'
   Plugin 'gorodinskiy/vim-coloresque'
-  Plugin 'scrooloose/nerdtree'
   Plugin 'tpope/vim-fugitive'
   Plugin 'airblade/vim-gitgutter'
   Plugin 'tpope/vim-surround'
   Plugin 'tpope/vim-sleuth'
-  Plugin 'jelera/vim-javascript-syntax'
   Plugin 'tpope/vim-markdown'
+  Plugin 'pangloss/vim-javascript'
+  Plugin 'mxw/vim-jsx'
+  Plugin 'scrooloose/syntastic'
+  Plugin 'kien/ctrlp.vim'
 
   call vundle#end()
 endif
@@ -89,26 +91,20 @@ set ttimeoutlen=10
 " Allow mouse usage
 set mouse=a
 
-" For git-gutter realtime
-let g:gitgutter_realtime = 0
-let g:gitgutter_eager = 0
-
-autocmd FileType javascript call JavaScriptFold()
-
-nmap <Leader>t :TagbarToggle<CR>
-map <C-n> :NERDTreeToggle<CR>
-
 " Clear whitespace at the end of lines automatically
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Don't fold anything.
 autocmd BufWinEnter * set foldlevel=999999
 
-" Show hidden files in nerd tree
-let NERDTreeShowHidden=1
-
 " Set filetype for ruby config files
 autocmd BufNewFile,BufRead Podfile,*.podspec,Berksfile,Cheffile,Vagrantfile set filetype=ruby
 
 let g:netrw_liststyle = 3
 let g:netrw_preview = 1
+
+let g:jsx_ext_required = 0
+
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
+
+set noswapfile
