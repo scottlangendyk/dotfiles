@@ -31,9 +31,6 @@
 [submodule "home/vim/bundle/syntastic"]
 	path = home/vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic
-[submodule "home/vim/bundle/ctrlp.vim"]
-	path = home/vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim
 [submodule "home/vim/bundle/vim-coloresque"]
 	path = home/vim/bundle/vim-coloresque
 	url = https://github.com/gorodinskiy/vim-coloresque
