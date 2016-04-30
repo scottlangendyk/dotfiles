@@ -1,5 +1,6 @@
 install:
 	git submodule init
+	ln -fs $(CURDIR)/home/profile $(HOME)/.profile
 	ln -fs $(CURDIR)/home/bashrc $(HOME)/.bashrc
 	ln -fs $(CURDIR)/home/bash_profile $(HOME)/.bash_profile
 	ln -fs $(CURDIR)/home/gitconfig $(HOME)/.gitconfig
