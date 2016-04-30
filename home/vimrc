@@ -1,57 +1,23 @@
-" Install Vundle.vim
-if !isdirectory(expand('~/.vim/bundle/Vundle.vim'))
-  silent !git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
-endif
+set nocompatible
+filetype off
 
-" Setup Vundle.vim
-if !isdirectory(expand('~/.vim/bundle/Vundle.vim'))
-  echoerr "Vundle.vim not installed"
-else
-  filetype off
-  set runtimepath+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
-
-  Plugin 'gmarik/Vundle.vim'
-  Plugin 'altercation/vim-colors-solarized'
-  Plugin 'bling/vim-airline'
-  Plugin 'gorodinskiy/vim-coloresque'
-  Plugin 'tpope/vim-fugitive'
-  Plugin 'airblade/vim-gitgutter'
-  Plugin 'tpope/vim-surround'
-  Plugin 'tpope/vim-sleuth'
-  Plugin 'tpope/vim-markdown'
-  Plugin 'pangloss/vim-javascript'
-  Plugin 'mxw/vim-jsx'
-  Plugin 'scrooloose/syntastic'
-  Plugin 'kien/ctrlp.vim'
-
-  call vundle#end()
-endif
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 
 filetype plugin indent on
-
-" Install plugins
-augroup plugins
-  autocmd!
-  autocmd VimEnter * PluginInstall
-  autocmd VimEnter * bdelete
-augroup END
+syntax on
 
 augroup myvimrc
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
-  autocmd BufWritePost $MYVIMRC PluginInstall
-  autocmd BufWritePost $MYVIMRC bdelete
   autocmd BufWritePost $MYVIMRC AirlineRefresh
   autocmd BufWritePost $MYVIMRC AirlineRefresh
 augroup END
 
-syntax on
-
 " Color scheme setup
 let g:solarized_termtrans=1
 set t_Co=16
-set background=light
+set background=dark
 colorscheme solarized
 
 " Powerline configuration
@@ -108,3 +74,7 @@ let g:jsx_ext_required = 0
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 
 set noswapfile
+
+let g:ctrlp_show_hidden = 1
+
+set clipboard=unnamed

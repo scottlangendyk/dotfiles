@@ -1,0 +1,42 @@
+[submodule "home/vim/bundle/vim-pathogen"]
+	path = home/vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule "home/vim/bundle/vim-colors-solarized"]
+	path = home/vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule "home/vim/bundle/vim-airline"]
+	path = home/vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "home/vim/bundle/vim-airline-themes"]
+	path = home/vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "home/vim/bundle/vim-gitgutter"]
+	path = home/vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "home/vim/bundle/vim-surround"]
+	path = home/vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "home/vim/bundle/vim-sleuth"]
+	path = home/vim/bundle/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth
+[submodule "home/vim/bundle/vim-markdown"]
+	path = home/vim/bundle/vim-markdown
+	url = https://github.com/tpope/vim-markdown
+[submodule "home/vim/bundle/vim-javascript"]
+	path = home/vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule "home/vim/bundle/vim-jsx"]
+	path = home/vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx
+[submodule "home/vim/bundle/syntastic"]
+	path = home/vim/bundle/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule "home/vim/bundle/ctrlp.vim"]
+	path = home/vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule "home/vim/bundle/vim-coloresque"]
+	path = home/vim/bundle/vim-coloresque
+	url = https://github.com/gorodinskiy/vim-coloresque
+[submodule "home/vim/bundle/vim-fugitive"]
+	path = home/vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
