@@ -9,6 +9,10 @@ if [ -d "$HOME/.ndenv/bin" ]; then
   eval "$(ndenv init -)"
 fi
 
+if [[ $(type -P dinghy) ]]; then
+  eval "$(dinghy env)"
+fi
+
 NO_COLOR='\[\033[0m\]'
 COLOR_RED='\[\033[0;31m\]'
 COLOR_WHITE='\[\033[0;37m\]'
