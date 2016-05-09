@@ -9,6 +9,7 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/code/go
 
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
 export PATH=$GOROOT/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
 export PATH=$PATH:/opt/chefdk/embedded/bin
