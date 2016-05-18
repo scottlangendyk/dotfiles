@@ -43,3 +43,6 @@
 [submodule "home/vim/bundle/vim-go"]
 	path = home/vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go
+[submodule "home/vim/bundle/dash.vim"]
+	path = home/vim/bundle/dash.vim
+	url = https://github.com/rizzatti/dash.vim.git
