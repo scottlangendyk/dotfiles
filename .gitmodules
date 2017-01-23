@@ -52,3 +52,6 @@
 [submodule "home/vim/bundle/vim-css-color"]
 	path = home/vim/bundle/vim-css-color
 	url = https://github.com/ap/vim-css-color
+[submodule "home/nodenv"]
+	path = home/nodenv
+	url = https://github.com/nodenv/nodenv.git

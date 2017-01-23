@@ -5,8 +5,8 @@ if [ -d "$HOME/.rbenv/bin" ]; then
   eval "$(rbenv init -)"
 fi
 
-if [ -d "$HOME/.ndenv/bin" ]; then
-  eval "$(ndenv init -)"
+if [ -d "$HOME/.nodenv/bin" ]; then
+  eval "$(nodenv init -)"
 fi
 
 if [[ $(type -P dinghy) ]]; then
