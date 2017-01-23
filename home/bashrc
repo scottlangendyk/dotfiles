@@ -1,11 +1,11 @@
 source /usr/local/etc/bash_completion.d/git-completion.bash
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 
-if [ -d "$HOME/.rbenv/bin" ]; then
+if [ -n "$(type -t rbenv)" ]; then
   eval "$(rbenv init -)"
 fi
 
-if [ -d "$HOME/.nodenv/bin" ]; then
+if [ -n "$(type -t nodenv)" ]; then
   eval "$(nodenv init -)"
 fi
 
