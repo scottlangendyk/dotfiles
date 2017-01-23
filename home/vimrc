@@ -26,6 +26,13 @@ set noshowmode
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
+" GViM
+if has("gui_running")
+  if has("gui_macvim")
+    set guifont=Source\ Code\ Pro\:h18
+  endif
+endif
+
 set number
 set nowrap
 set encoding=utf-8
