@@ -10,4 +10,5 @@ install:
 	ln -fs $(CURDIR)/home/vimrc $(HOME)/.vimrc
 	rm -rf $(HOME)/.vim && ln -fs $(CURDIR)/home/vim $(HOME)/.vim
 	rm -rf $(HOME)/.nodenv && ln -fs $(CURDIR)/home/nodenv $(HOME)/.nodenv
+	ln -fs $(CURDIR)/home/node-build $(HOME)/.nodenv/plugins/node-build
 	rm -rf $(HOME)/.rbenv && ln -fs $(CURDIR)/home/rbenv $(HOME)/.rbenv
