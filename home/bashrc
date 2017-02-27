@@ -25,4 +25,6 @@ COLOR_BLUE='\[\033[0;34m\]'
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 
-PS1="${COLOR_YELLOW}\W${COLOR_BLUE}\$(__git_ps1) ${NO_COLOR}"
+if [ ! -n "$SSH_CLIENT" ] && [ ! -n "$SSH_TTY" ]; then
+  PS1="${COLOR_YELLOW}\W${COLOR_BLUE}\$(__git_ps1) ${NO_COLOR}"
+fi
