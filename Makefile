@@ -8,6 +8,7 @@ install:
 	ln -fs $(CURDIR)/home/gitignore $(HOME)/.gitignore
 	ln -fs $(CURDIR)/home/gemrc $(HOME)/.gemrc
 	ln -fs $(CURDIR)/home/vimrc $(HOME)/.vimrc
+	ln -fs $(CURDIR)/home/tmux.conf $(HOME)/.tmux.conf
 	rm -rf $(HOME)/.vim && ln -fs $(CURDIR)/home/vim $(HOME)/.vim
 	rm -rf $(HOME)/.nodenv && ln -fs $(CURDIR)/home/nodenv $(HOME)/.nodenv
 	mkdir -p $(HOME)/.nodenv/plugins
