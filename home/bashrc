@@ -4,6 +4,12 @@ if [ -d /usr/local/etc/bash_completion.d ]; then
   done
 fi
 
+if [ -d /etc/bash_completion.d ]; then
+  for f in /etc/bash_completion.d/*; do
+    source $f;
+  done
+fi
+
 if [ -f /etc/bash_completion ]; then
   source /etc/bash_completion;
 fi
